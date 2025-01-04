@@ -1,18 +1,36 @@
-.post-feed {
+.post-grid {
   width: 80%;
   margin: auto;
   display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto auto;
-  -moz-column-gap: 0.325em;
-       column-gap: 0.325em;
-  align-content: start;
+  justify-content: center;
+  grid-template-columns: repeat(3, 30%);
+  grid-template-rows: repeat(4, auto);
+  gap: 0.325em;
 }
-
-.shortImage {
-  grid-area: "shortImage";
+.post-grid img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
-
-.longImage {
-  grid-area: "longImage";
+.post-grid .post:nth-child(1) {
+  grid-area: 1/1/3/2;
+}
+.post-grid .post:nth-child(2) {
+  grid-area: 1/2/2/3;
+}
+.post-grid .post:nth-child(3) {
+  grid-area: 1/3/3/4;
+}
+.post-grid .post:nth-child(4) {
+  grid-area: 3/1/5/2;
+}
+.post-grid .post:nth-child(5) {
+  grid-area: 2/2/4/3;
+}
+.post-grid .post:nth-child(6) {
+  grid-area: 3/3/5/4;
+}
+.post-grid .post:nth-child(7) {
+  grid-area: 4/2/5/3;
 }/*# sourceMappingURL=style.css.map */
